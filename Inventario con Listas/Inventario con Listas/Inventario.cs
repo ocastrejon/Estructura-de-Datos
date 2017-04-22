@@ -8,92 +8,95 @@ namespace Inventario_con_Listas
 {
     class Inventario
     {
-        private Producto[] pro = new Producto[15];
-        private int _con;
-        public int con { get { return _con; } }
+        Producto inicio;
+        Producto temp;
 
-        public Inventario()
+        public void Agregar(Producto nuevo)
         {
-            _con = 0;
-        }
-
-        public string Agregar(Producto pr)
-        {
-            if (con < 15)
+            if (inicio == null)
+                inicio = nuevo;
+            else
             {
-                if (Buscar(pr.codigo) == null)
-                {
-                    pro[con] = pr;
-                    _con++;
-                    return "Guardado";
-                }
-                else
-                {
-                    return "Código ya existente";
-                }
+                temp = inicio;
+                while (temp.siguiente != null)
+                    temp = temp.siguiente;
+                temp.siguiente = nuevo;
             }
-            return "Lleno";
         }
 
         public Producto Buscar(int cod)
         {
             Producto x = null;
-            for (short i = 0; i < con; i++)
+            Producto b = inicio;
+            while (b != null)
             {
-                if (cod == pro[i].codigo)
+                if (b.codigo == cod)
                 {
-                    x = pro[i];
+                    x = b;
+                    break;
                 }
+                else
+                    b = b.siguiente;
             }
             return x;
         }
 
         public void Borrar(int cod)
         {
-            int i = 0;
-            for (i = 0; i < _con; i++)
+            while (inicio != null)
             {
-                if (pro[i].codigo == cod)
+                if (inicio.codigo == cod)
                 {
-                    pro[i] = null;
+                    inicio = inicio.siguiente;
                     break;
                 }
+
+                Producto b = inicio;
+                if (b.siguiente.codigo == cod)
+                {
+                    b.siguiente = b.siguiente.siguiente;
+                    break;
+                }
+                else
+                    b = b.siguiente;
             }
-            for (i = i + 1; i < _con; i++)
-                pro[i - 1] = pro[i];
-            pro[_con - 1] = null;
-            _con--;
         }
 
         public string Reporte()
         {
-            string x = "";
-            for (int i = 0; i < _con; i++)
-                x += (i + 1) + ".- " + pro[i].ToString();
-            return x;
+            string datos = "";
+            Producto t = inicio;
+            while (t != null)
+            {
+                datos += t.ToString();
+                t = t.siguiente;
+            }
+            return datos;
         }
 
-        public string Insertar(Producto pr, int pos)
+        public void Insertar(Producto pr, int pos)
         {
-            if (con < 15)
-            {
-                if (Buscar(pr.codigo) == null)
-                {
-                    Producto p2;
-                    p2 = pro[_con - 1];
-                    for (int i = _con - 1; i > pos; i--)
-                        pro[i] = pro[i - 1];
-                    pro[_con] = p2;
-                    pro[pos] = pr;
-                    _con++;
-                    return "Agregado Existosamente.";
-                }
-                else
-                {
-                    return "Código ya existente";
-                }
-            }
-            return "Lleno";
+
+
+            //if (con < 15)
+            //{
+            //    if (Buscar(pr.codigo) == null)
+            //    {
+            //        Producto p2;
+            //        p2 = pro[_con - 1];
+            //        for (int i = _con - 1; i > pos; i--)
+            //            pro[i] = pro[i - 1];
+            //        pro[_con] = p2;
+            //        pro[pos] = pr;
+            //        _con++;
+            //        return "Agregado Existosamente.";
+            //    }
+            //    else
+            //    {
+            //        return "Código ya existente";
+            //    }
+            //}
+            //return "Lleno";
         }
     }
 }

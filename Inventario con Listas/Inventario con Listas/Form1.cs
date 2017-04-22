@@ -29,20 +29,18 @@ namespace Inventario_con_Listas
                 MessageBox.Show("Faltan datos por agregar");
             else
             {
-                string x = "";
                 Producto prA = new Producto();
                 prA.codigo = Convert.ToInt16(txtBxCodigo.Text);
                 prA.nombre = txtBxNombre.Text;
                 prA.cantidad = Convert.ToInt16(txtBxCantidad.Text);
                 prA.precio = Convert.ToInt16(txtBxPrecio.Text);
 
-                x = inv.Agregar(prA);
+                inv.Agregar(prA);
 
                 txtBxCodigo.Clear();
                 txtBxNombre.Clear();
                 txtBxCantidad.Clear();
                 txtBxPrecio.Clear();
-                MessageBox.Show(x);
             }
         }
 
@@ -99,7 +97,7 @@ namespace Inventario_con_Listas
 
         private void bttnReporte_Click(object sender, EventArgs e)
         {
-            if (inv.con == 0)
+            if (inv.inicio == null)
                 MessageBox.Show("No hay reportes existentes.");
             else
             {

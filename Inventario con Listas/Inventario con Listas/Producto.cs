@@ -17,12 +17,15 @@ namespace Inventario_con_Listas
         private int _precio;
         public int precio { get { return _precio; } set { _precio = value; } }
 
+        public Producto siguiente;
+
         public Producto()
         {
             _codigo = 0;
             _nombre = "";
             _cantidad = 0;
             _precio = 0;
+            siguiente = null;
         }
 
         public override string ToString()
