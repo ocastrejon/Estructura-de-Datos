@@ -13,6 +13,7 @@ namespace Inventario_con_Listas
 
         public void Agregar(Producto nuevo)
         {
+            //Falta que se guarden por orden
             if (inicio == null)
                 inicio = nuevo;
             else
