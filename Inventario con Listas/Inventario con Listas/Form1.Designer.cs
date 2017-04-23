@@ -30,11 +30,8 @@
         {
             this.bttnReporte = new System.Windows.Forms.Button();
             this.txtBxInventario = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtBxPosicion = new System.Windows.Forms.TextBox();
             this.bttnBuscar = new System.Windows.Forms.Button();
             this.bttnEliminar = new System.Windows.Forms.Button();
-            this.bttnInsertar = new System.Windows.Forms.Button();
             this.txtBxPrecio = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtBxCantidad = new System.Windows.Forms.TextBox();
@@ -44,13 +41,15 @@
             this.txtBxCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bttnAgregar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bttnReporte
             // 
             this.bttnReporte.AutoSize = true;
             this.bttnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnReporte.Location = new System.Drawing.Point(181, 482);
+            this.bttnReporte.Location = new System.Drawing.Point(158, 482);
             this.bttnReporte.Name = "bttnReporte";
             this.bttnReporte.Size = new System.Drawing.Size(110, 39);
             this.bttnReporte.TabIndex = 31;
@@ -61,36 +60,18 @@
             // txtBxInventario
             // 
             this.txtBxInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxInventario.Location = new System.Drawing.Point(302, 28);
+            this.txtBxInventario.Location = new System.Drawing.Point(282, 28);
             this.txtBxInventario.Multiline = true;
             this.txtBxInventario.Name = "txtBxInventario";
             this.txtBxInventario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBxInventario.Size = new System.Drawing.Size(231, 493);
             this.txtBxInventario.TabIndex = 30;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(235, 203);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 29);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Pos:";
-            // 
-            // txtBxPosicion
-            // 
-            this.txtBxPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxPosicion.Location = new System.Drawing.Point(240, 235);
-            this.txtBxPosicion.Name = "txtBxPosicion";
-            this.txtBxPosicion.Size = new System.Drawing.Size(43, 34);
-            this.txtBxPosicion.TabIndex = 28;
-            // 
             // bttnBuscar
             // 
             this.bttnBuscar.AutoSize = true;
             this.bttnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnBuscar.Location = new System.Drawing.Point(122, 290);
+            this.bttnBuscar.Location = new System.Drawing.Point(166, 322);
             this.bttnBuscar.Name = "bttnBuscar";
             this.bttnBuscar.Size = new System.Drawing.Size(102, 39);
             this.bttnBuscar.TabIndex = 27;
@@ -102,25 +83,13 @@
             // 
             this.bttnEliminar.AutoSize = true;
             this.bttnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnEliminar.Location = new System.Drawing.Point(47, 290);
+            this.bttnEliminar.Location = new System.Drawing.Point(190, 259);
             this.bttnEliminar.Name = "bttnEliminar";
             this.bttnEliminar.Size = new System.Drawing.Size(55, 39);
             this.bttnEliminar.TabIndex = 26;
             this.bttnEliminar.Text = "-";
             this.bttnEliminar.UseVisualStyleBackColor = true;
             this.bttnEliminar.Click += new System.EventHandler(this.bttnEliminar_Click);
-            // 
-            // bttnInsertar
-            // 
-            this.bttnInsertar.AutoSize = true;
-            this.bttnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnInsertar.Location = new System.Drawing.Point(122, 232);
-            this.bttnInsertar.Name = "bttnInsertar";
-            this.bttnInsertar.Size = new System.Drawing.Size(103, 39);
-            this.bttnInsertar.TabIndex = 25;
-            this.bttnInsertar.Text = "Insertar";
-            this.bttnInsertar.UseVisualStyleBackColor = true;
-            this.bttnInsertar.Click += new System.EventHandler(this.bttnInsertar_Click);
             // 
             // txtBxPrecio
             // 
@@ -198,7 +167,7 @@
             // 
             this.bttnAgregar.AutoSize = true;
             this.bttnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnAgregar.Location = new System.Drawing.Point(47, 232);
+            this.bttnAgregar.Location = new System.Drawing.Point(190, 202);
             this.bttnAgregar.Name = "bttnAgregar";
             this.bttnAgregar.Size = new System.Drawing.Size(55, 39);
             this.bttnAgregar.TabIndex = 16;
@@ -206,18 +175,37 @@
             this.bttnAgregar.UseVisualStyleBackColor = true;
             this.bttnAgregar.Click += new System.EventHandler(this.bttnAgregar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 207);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 29);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Agregar:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(77, 264);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(107, 29);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Eliminar:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 548);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.bttnReporte);
             this.Controls.Add(this.txtBxInventario);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtBxPosicion);
             this.Controls.Add(this.bttnBuscar);
             this.Controls.Add(this.bttnEliminar);
-            this.Controls.Add(this.bttnInsertar);
             this.Controls.Add(this.txtBxPrecio);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtBxCantidad);
@@ -239,11 +227,8 @@
 
         private System.Windows.Forms.Button bttnReporte;
         private System.Windows.Forms.TextBox txtBxInventario;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtBxPosicion;
         private System.Windows.Forms.Button bttnBuscar;
         private System.Windows.Forms.Button bttnEliminar;
-        private System.Windows.Forms.Button bttnInsertar;
         private System.Windows.Forms.TextBox txtBxPrecio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBxCantidad;
@@ -253,6 +238,8 @@
         private System.Windows.Forms.TextBox txtBxCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bttnAgregar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -8,7 +8,7 @@ namespace Inventario_con_Listas
 {
     class Inventario
     {
-        Producto inicio;
+        public Producto inicio;
         Producto temp;
 
         public void Agregar(Producto nuevo)
@@ -72,31 +72,6 @@ namespace Inventario_con_Listas
                 t = t.siguiente;
             }
             return datos;
-        }
-
-        public void Insertar(Producto pr, int pos)
-        {
-
-
-            //if (con < 15)
-            //{
-            //    if (Buscar(pr.codigo) == null)
-            //    {
-            //        Producto p2;
-            //        p2 = pro[_con - 1];
-            //        for (int i = _con - 1; i > pos; i--)
-            //            pro[i] = pro[i - 1];
-            //        pro[_con] = p2;
-            //        pro[pos] = pr;
-            //        _con++;
-            //        return "Agregado Existosamente.";
-            //    }
-            //    else
-            //    {
-            //        return "Código ya existente";
-            //    }
-            //}
-            //return "Lleno";
         }
     }
 }
