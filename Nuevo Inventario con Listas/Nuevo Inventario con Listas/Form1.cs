@@ -58,7 +58,7 @@ namespace Nuevo_Inventario_con_Listas
         }
 
         private void bttnInsertar_Click(object sender, EventArgs e)
-        {
+        {//Falta
             if (string.IsNullOrEmpty(txtBxPosicion.Text))
                 MessageBox.Show("Agregar posicion donde se insertará el producto");
             else

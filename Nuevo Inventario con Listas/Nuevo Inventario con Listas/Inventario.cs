@@ -64,7 +64,12 @@ namespace Nuevo_Inventario_con_Listas
 
         public void Insertar(Producto pr, int a)
         {
+            //Falta
+        }
 
+        public void AgregarEnInicio(Producto pr)
+        {
+           //Falta
         }
 
         public string Reporte()
