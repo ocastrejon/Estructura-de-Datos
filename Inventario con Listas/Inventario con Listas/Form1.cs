@@ -59,24 +59,7 @@ namespace Inventario_con_Listas
 
         private void bttnInsertar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBxPosicion.Text))
-                MessageBox.Show("Agregar posicion donde se insertará el producto");
-            else
-            {
-                Producto prI = new Producto();
-                prI.codigo = Convert.ToInt16(txtBxCodigo.Text);
-                prI.nombre = txtBxNombre.Text;
-                prI.cantidad = Convert.ToInt16(txtBxCantidad.Text);
-                prI.precio = Convert.ToInt16(txtBxPrecio.Text);
-
-                inv.Insertar(prI, Convert.ToInt16(txtBxPosicion.Text));
-
-                txtBxCodigo.Clear();
-                txtBxCantidad.Clear();
-                txtBxNombre.Clear();
-                txtBxPrecio.Clear();
-                txtBxPosicion.Clear();
-            }
+           
         }
 
         private void bttnBuscar_Click(object sender, EventArgs e)
