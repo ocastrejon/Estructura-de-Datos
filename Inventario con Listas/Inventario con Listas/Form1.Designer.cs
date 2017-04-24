@@ -1,4 +1,4 @@
-﻿namespace Inventario_con_Listas
+﻿namespace Inventario_Ordenado_con_Listas_Enlazadas
 {
     partial class Form1
     {

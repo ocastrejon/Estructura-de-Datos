@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventario_con_Listas
+namespace Inventario_Ordenado_con_Listas_Enlazadas
 {
     class Inventario
     {
@@ -13,7 +13,7 @@ namespace Inventario_con_Listas
 
         public void Agregar(Producto nuevo)
         {
-            //Falta que se guarden por orden
+            //Falta que se guarden por orden x
             if (inicio == null)
                 inicio = nuevo;
             else if(nuevo.codigo < inicio.codigo)

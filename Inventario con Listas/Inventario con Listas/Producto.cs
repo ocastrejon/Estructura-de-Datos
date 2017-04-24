@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inventario_con_Listas
+namespace Inventario_Ordenado_con_Listas_Enlazadas
 {
     class Producto
     {
