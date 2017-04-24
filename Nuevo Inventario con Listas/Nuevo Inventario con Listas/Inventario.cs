@@ -9,7 +9,7 @@ namespace Nuevo_Inventario_con_Listas
     class Inventario
     {
         public Producto inicio;
-        Producto temp;
+        //Producto temp;
 
         public void Agregar(Producto nuevo)
         {
@@ -76,20 +76,23 @@ namespace Nuevo_Inventario_con_Listas
 
         public void Insertar(Producto nuevo, int pos)
         {
-            int contador = 0;
-                temp = inicio;
+            int contador = 1;
+                Producto tem = inicio;
 
-            if (inicio == null)
+            if (pos == 1)
+            {
+                nuevo.siguiente = inicio;
                 inicio = nuevo;
+            }
             else
             {
-                while (temp.siguiente != null && contador < pos)
+                while (tem.siguiente != null && contador < pos-1)
                 {
-                    temp = temp.siguiente;
+                    tem = tem.siguiente;
                     contador++;
                 }
-                temp.siguiente = nuevo;
-                nuevo.siguiente = temp;
+                nuevo.siguiente = tem.siguiente;
+                tem.siguiente = nuevo;
             }
         }
 
