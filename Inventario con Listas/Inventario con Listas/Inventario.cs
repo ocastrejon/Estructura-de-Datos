@@ -19,11 +19,15 @@ namespace Inventario_con_Listas
             else if(nuevo.codigo < inicio.codigo)
             {
                 nuevo.siguiente = inicio;
-
+                inicio = nuevo;
                 //temp = inicio;
                 //while (temp.siguiente != null)
                 //    temp = temp.siguiente;
                 //temp.siguiente = nuevo;
+            }
+            else
+            {
+
             }
         }
 

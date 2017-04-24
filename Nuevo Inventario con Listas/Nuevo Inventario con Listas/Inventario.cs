@@ -77,16 +77,19 @@ namespace Nuevo_Inventario_con_Listas
         public void Insertar(Producto nuevo, int pos)
         {
             int contador = 0;
+                temp = inicio;
+
             if (inicio == null)
                 inicio = nuevo;
             else
             {
-                while(temp.siguiente != null && contador < pos)
+                while (temp.siguiente != null && contador < pos)
                 {
                     temp = temp.siguiente;
                     contador++;
                 }
-
+                temp.siguiente = nuevo;
+                nuevo.siguiente = temp;
             }
         }
 
