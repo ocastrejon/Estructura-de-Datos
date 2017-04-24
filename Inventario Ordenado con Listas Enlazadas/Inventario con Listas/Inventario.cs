@@ -11,6 +11,8 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
         public Producto inicio;
         Producto temp;
 
+        //Agregar que imprima la lista invertida
+
         public void Agregar(Producto nuevo)
         {
             //Falta que se guarden por orden x
@@ -27,7 +29,11 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
             }
             else
             {
-
+                temp = inicio;
+                while (temp.siguiente != null && temp.siguiente.codigo < nuevo.codigo)
+                    temp = temp.siguiente;
+                nuevo.siguiente = temp.siguiente;
+                temp.siguiente = nuevo;
             }
         }
 
