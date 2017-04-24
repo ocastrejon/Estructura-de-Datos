@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nuevo_Inventario_con_Listas.Properties
+namespace Inventario_con_Listas_Simples_Enlazadas.Properties
 {
 
 

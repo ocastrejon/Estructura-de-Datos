@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Nuevo_Inventario_con_Listas.Properties
+namespace Inventario_con_Listas_Simples_Enlazadas.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Nuevo_Inventario_con_Listas.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Nuevo_Inventario_con_Listas.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Inventario_con_Listas_Simples_Enlazadas.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

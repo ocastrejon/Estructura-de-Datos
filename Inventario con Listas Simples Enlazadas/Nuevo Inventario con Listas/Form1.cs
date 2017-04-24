@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Nuevo_Inventario_con_Listas
+namespace Inventario_con_Listas_Simples_Enlazadas
 {
     public partial class Form1 : Form
     {
