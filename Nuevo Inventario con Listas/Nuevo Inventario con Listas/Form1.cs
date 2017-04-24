@@ -105,5 +105,26 @@ namespace Nuevo_Inventario_con_Listas
                 txtBxInventario.Text += inv.Reporte().ToString();
             }
         }
+
+        private void bttnAgregarEnInicio_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtBxCodigo.Text) || string.IsNullOrEmpty(txtBxNombre.Text) || string.IsNullOrEmpty(txtBxCantidad.Text) || string.IsNullOrEmpty(txtBxPrecio.Text))
+                MessageBox.Show("Faltan datos por agregar");
+            else
+            {
+                Producto prA = new Producto();
+                prA.codigo = Convert.ToInt16(txtBxCodigo.Text);
+                prA.nombre = txtBxNombre.Text;
+                prA.cantidad = Convert.ToInt16(txtBxCantidad.Text);
+                prA.precio = Convert.ToInt16(txtBxPrecio.Text);
+
+                inv.AgregarEnInicio(prA);
+
+                txtBxCodigo.Clear();
+                txtBxNombre.Clear();
+                txtBxCantidad.Clear();
+                txtBxPrecio.Clear();
+            }
+        }
     }
 }

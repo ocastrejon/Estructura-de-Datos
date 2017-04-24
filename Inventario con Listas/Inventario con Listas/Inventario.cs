@@ -16,12 +16,14 @@ namespace Inventario_con_Listas
             //Falta que se guarden por orden
             if (inicio == null)
                 inicio = nuevo;
-            else
+            else if(nuevo.codigo < inicio.codigo)
             {
-                temp = inicio;
-                while (temp.siguiente != null)
-                    temp = temp.siguiente;
-                temp.siguiente = nuevo;
+                nuevo.siguiente = inicio;
+
+                //temp = inicio;
+                //while (temp.siguiente != null)
+                //    temp = temp.siguiente;
+                //temp.siguiente = nuevo;
             }
         }
 

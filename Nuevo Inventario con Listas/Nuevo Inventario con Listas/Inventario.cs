@@ -16,12 +16,24 @@ namespace Nuevo_Inventario_con_Listas
             if (inicio == null)
                 inicio = nuevo;
             else
-            {
-                temp = inicio;
-                while (temp.siguiente != null)
-                    temp = temp.siguiente;
-                temp.siguiente = nuevo;
-            }
+                Agregar(inicio, nuevo);
+            //if (inicio == null)
+            //    inicio = nuevo;
+            //else
+            //{
+            //    temp = inicio;
+            //    while (temp.siguiente != null)
+            //        temp = temp.siguiente;
+            //    temp.siguiente = nuevo;
+            //}
+        }
+
+        private void Agregar(Producto ultimo, Producto nuevo)
+        {
+            if (ultimo.siguiente == null)
+                ultimo.siguiente = nuevo;
+            else
+                Agregar(ultimo.siguiente, nuevo);
         }
 
         public Producto Buscar(int cod)
@@ -62,14 +74,32 @@ namespace Nuevo_Inventario_con_Listas
             }
         }
 
-        public void Insertar(Producto pr, int a)
+        public void Insertar(Producto nuevo, int pos)
         {
-            //Falta
+            int contador = 0;
+            if (inicio == null)
+                inicio = nuevo;
+            else
+            {
+                while(temp.siguiente != null && contador < pos)
+                {
+                    temp = temp.siguiente;
+                    contador++;
+                }
+
+            }
         }
 
-        public void AgregarEnInicio(Producto pr)
+        public void AgregarEnInicio(Producto nuevo)
         {
-           //Falta
+            if (inicio == null)
+                inicio = nuevo;
+            else
+            {
+                nuevo.siguiente = inicio;
+                inicio = nuevo;
+            }
+
         }
 
         public string Reporte()

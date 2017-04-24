@@ -44,6 +44,7 @@
             this.txtBxCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bttnAgregar = new System.Windows.Forms.Button();
+            this.bttnAgregarEnInicio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnReporte
@@ -72,7 +73,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(217, 210);
+            this.label5.Location = new System.Drawing.Point(216, 270);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 29);
             this.label5.TabIndex = 29;
@@ -81,7 +82,7 @@
             // txtBxPosicion
             // 
             this.txtBxPosicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxPosicion.Location = new System.Drawing.Point(222, 242);
+            this.txtBxPosicion.Location = new System.Drawing.Point(221, 302);
             this.txtBxPosicion.Name = "txtBxPosicion";
             this.txtBxPosicion.Size = new System.Drawing.Size(43, 34);
             this.txtBxPosicion.TabIndex = 28;
@@ -90,7 +91,7 @@
             // 
             this.bttnBuscar.AutoSize = true;
             this.bttnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnBuscar.Location = new System.Drawing.Point(104, 297);
+            this.bttnBuscar.Location = new System.Drawing.Point(103, 357);
             this.bttnBuscar.Name = "bttnBuscar";
             this.bttnBuscar.Size = new System.Drawing.Size(102, 39);
             this.bttnBuscar.TabIndex = 27;
@@ -114,7 +115,7 @@
             // 
             this.bttnInsertar.AutoSize = true;
             this.bttnInsertar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnInsertar.Location = new System.Drawing.Point(104, 239);
+            this.bttnInsertar.Location = new System.Drawing.Point(103, 299);
             this.bttnInsertar.Name = "bttnInsertar";
             this.bttnInsertar.Size = new System.Drawing.Size(103, 39);
             this.bttnInsertar.TabIndex = 25;
@@ -206,11 +207,24 @@
             this.bttnAgregar.UseVisualStyleBackColor = true;
             this.bttnAgregar.Click += new System.EventHandler(this.bttnAgregar_Click);
             // 
+            // bttnAgregarEnInicio
+            // 
+            this.bttnAgregarEnInicio.AutoSize = true;
+            this.bttnAgregarEnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnAgregarEnInicio.Location = new System.Drawing.Point(106, 239);
+            this.bttnAgregarEnInicio.Name = "bttnAgregarEnInicio";
+            this.bttnAgregarEnInicio.Size = new System.Drawing.Size(100, 39);
+            this.bttnAgregarEnInicio.TabIndex = 32;
+            this.bttnAgregarEnInicio.Text = "+ Inicio";
+            this.bttnAgregarEnInicio.UseVisualStyleBackColor = true;
+            this.bttnAgregarEnInicio.Click += new System.EventHandler(this.bttnAgregarEnInicio_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 562);
+            this.Controls.Add(this.bttnAgregarEnInicio);
             this.Controls.Add(this.bttnReporte);
             this.Controls.Add(this.txtBxInventario);
             this.Controls.Add(this.label5);
@@ -253,6 +267,7 @@
         private System.Windows.Forms.TextBox txtBxCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bttnAgregar;
+        private System.Windows.Forms.Button bttnAgregarEnInicio;
     }
 }
 
