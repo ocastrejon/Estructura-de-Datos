@@ -12,11 +12,8 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
         public Producto inicio { get; set; }
         Producto temp;
 
-        //Agregar que imprima la lista invertida
-
         public void Agregar(Producto nuevo)
         {
-            //Falta que se guarden por orden x
             if (inicio == null)
                 inicio = nuevo;
             else if(nuevo.codigo < inicio.codigo)
@@ -38,13 +35,11 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
             }
         }
 
-        //Para buscar y borrar acomodar el codigo para que no compare todos los elementos
         public Producto Buscar(int cod)
         {
             Producto x = null;
             Producto b = inicio;
 
-            //if (b != null)
                 while (b != null && b.codigo <= cod)
                 {
                     if (b.codigo == cod)
@@ -62,7 +57,6 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
         {
                 Producto b = inicio;
 
-            //if(b != null)
             while (b != null && b.codigo <= cod)
             {
                 if (inicio.codigo == cod)
