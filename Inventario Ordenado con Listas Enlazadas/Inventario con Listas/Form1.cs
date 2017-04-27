@@ -88,5 +88,10 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
                 txtBxInventario.Text += inv.Reporte().ToString();
             }
         }
+
+        private void bttnReporteInvertido_Click(object sender, EventArgs e)
+        {
+            txtBxInventario.Text += inv.ReporteInvertido();
+        }
     }
 }

@@ -8,7 +8,8 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
 {
     class Inventario
     {
-        public Producto inicio;
+        //Agregar get y set a propiedades
+        public Producto inicio { get; set; }
         Producto temp;
 
         //Agregar que imprima la lista invertida
@@ -37,26 +38,32 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
             }
         }
 
+        //Para buscar y borrar acomodar el codigo para que no compare todos los elementos
         public Producto Buscar(int cod)
         {
             Producto x = null;
             Producto b = inicio;
-            while (b != null)
-            {
-                if (b.codigo == cod)
+
+            //if (b != null)
+                while (b != null && b.codigo <= cod)
                 {
-                    x = b;
-                    break;
+                    if (b.codigo == cod)
+                    {
+                        x = b;
+                        break;
+                    }
+                    else
+                        b = b.siguiente;
                 }
-                else
-                    b = b.siguiente;
-            }
             return x;
         }
 
         public void Borrar(int cod)
         {
-            while (inicio != null)
+                Producto b = inicio;
+
+            //if(b != null)
+            while (b != null && b.codigo <= cod)
             {
                 if (inicio.codigo == cod)
                 {
@@ -64,7 +71,6 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
                     break;
                 }
 
-                Producto b = inicio;
                 if (b.siguiente.codigo == cod)
                 {
                     b.siguiente = b.siguiente.siguiente;
@@ -85,6 +91,26 @@ namespace Inventario_Ordenado_con_Listas_Enlazadas
                 t = t.siguiente;
             }
             return datos;
+        }
+
+        public string ReporteInvertido()
+        {
+            string datos = "Reporte Vacio";
+            Producto temp = inicio;
+            if (temp == null)
+                return datos;
+            else
+                return ReporteInvertido(temp);
+        }
+
+        private string ReporteInvertido(Producto temp)
+        {
+            if (temp.siguiente == null)
+                return temp.ToString();
+            else
+            {
+                return ReporteInvertido(temp.siguiente) + temp.ToString();
+            }
         }
     }
 }

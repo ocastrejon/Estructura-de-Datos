@@ -43,6 +43,7 @@
             this.bttnAgregar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.bttnReporteInvertido = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttnReporte
@@ -195,11 +196,24 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Eliminar:";
             // 
+            // bttnReporteInvertido
+            // 
+            this.bttnReporteInvertido.AutoSize = true;
+            this.bttnReporteInvertido.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnReporteInvertido.Location = new System.Drawing.Point(60, 421);
+            this.bttnReporteInvertido.Name = "bttnReporteInvertido";
+            this.bttnReporteInvertido.Size = new System.Drawing.Size(208, 39);
+            this.bttnReporteInvertido.TabIndex = 34;
+            this.bttnReporteInvertido.Text = "Reporte Invertido";
+            this.bttnReporteInvertido.UseVisualStyleBackColor = true;
+            this.bttnReporteInvertido.Click += new System.EventHandler(this.bttnReporteInvertido_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 548);
+            this.Controls.Add(this.bttnReporteInvertido);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bttnReporte);
@@ -240,6 +254,7 @@
         private System.Windows.Forms.Button bttnAgregar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button bttnReporteInvertido;
     }
 }
 
